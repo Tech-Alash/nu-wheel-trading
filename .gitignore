@@ -1,0 +1,33 @@
+# Secrets — НИКОГДА не коммитить!
+.env
+*.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Большие бинарные данные (пересоздаются локально)
+data/models/*.pkl
+data/raw/stock_history_ibkr.csv
+data/processed/*.csv
+data/portfolio.db
+
+# Логи
+logs/*.log
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ОСТАВЛЯЕМ в git:
+# data/raw/options_YYYY-MM-DD.csv  ← ежедневные снимки (GitHub Actions)
+# !data/raw/options_*.csv
